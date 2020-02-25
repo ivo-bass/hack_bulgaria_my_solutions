@@ -1,0 +1,25 @@
+"""https://github.com/HackBulgaria/Programming-101-Python-2020-Spring/tree/master/week01/01.PythonProblems#longest-subsequence-of-equal-consecutive-elements"""
+
+def max_consecutive(items):
+    """Takes a list of things and returns an integer - the count of elements
+       in the longest subsequence of equal consecutive elements"""
+    longest_count = 0
+    counter = 0
+    for item in range(len(items)):
+        if item < len(items) - 1:
+            # check every item except for the last one
+            if items[item + 1] == items[item]:
+                counter += 1
+                if counter > longest_count:
+                    longest_count = counter
+            else:
+                counter = 0
+        else:
+            # check the las item
+            if items[item - 1] == items[item]:
+                counter += 1
+                if counter > longest_count:
+                    longest_count = counter
+            else:
+                counter = 0
+    return longest_count

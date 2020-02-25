@@ -1,0 +1,13 @@
+#! usr/bin/python
+
+def fact_digits(n):
+    """Takes an integer and returns the sum of the factorials of each digit of n."""
+    result = 0
+    n_repr = repr(n)
+    for digit in n_repr:
+        factorial = 1
+        if int(digit) != 0:
+            for i in range(1, int(digit) + 1):
+                factorial = factorial * i
+        result += factorial
+    return result

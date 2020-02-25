@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 """https://github.com/HackBulgaria/Programming-101-Python-2020-Spring/tree/master/week01/01.PythonProblems#longest-subsequence-of-equal-consecutive-elements"""
 
 def max_consecutive(items):

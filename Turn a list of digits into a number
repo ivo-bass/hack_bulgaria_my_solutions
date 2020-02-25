@@ -1,0 +1,11 @@
+#! usr/bin/python
+
+def to_number(digits):
+    """takes a list of integers - digits and
+    returns the number, containing those digits"""
+    num_repr = ""
+    for digit in digits:
+        num_repr += repr(digit)
+    num = int(num_repr)
+    print(num)
+    return num

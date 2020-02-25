@@ -1,0 +1,9 @@
+#! usr/bin/python
+
+def to_digits(n):
+    """Takes an integer n and returns a list, containing the digits of n"""
+    list_n = []
+    n_repr = repr(n)
+    for i in n_repr:
+        list_n.append(int(i))
+    return list_n

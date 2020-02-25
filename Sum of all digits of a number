@@ -1,0 +1,12 @@
+#! usr/bin/python
+
+def sum_of_digits(n):
+    """Calculates the sum of integer's digits"""
+    if n < 0:
+        n = abs(n)
+    result = 0
+    while n:
+        digit = n % 10
+        n = n // 10
+        result += digit
+    return result
